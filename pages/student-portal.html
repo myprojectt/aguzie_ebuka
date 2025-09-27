@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Project Allocation - Student Portal | Polybay</title>
+    <link rel="icon" href="../images/polybay.png" type="image/png" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/portal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="app-screen">
+        <header class="portal-header">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1>Student Profile</h1>
+        </header>
+
+        <div class="profile-editor">
+            <div class="profile-photo">
+                <img src="../images/nophoto.jpg" alt="Profile Photo" id="profilePhoto">
+                <label class="change-photo" id="changePhoto">
+                    <i class="fas fa-camera"></i>
+                    <input type="file" id="photoInput" accept="image/*" style="display: none;">
+                </label>
+            </div>
+
+            <div class="student-details">
+                <div class="detail-item">
+                    <label>Full Name:</label>
+                    <p id="studentName">Loading...</p>
+                </div>
+                <div class="detail-item">
+                    <label>Registration Number:</label>
+                    <p id="regNumber">Loading...</p>
+                </div>
+                <div class="detail-item">
+                    <label>Email:</label>
+                    <p id="studentEmail">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="portalDebug" style="position:fixed;right:12px;bottom:12px;background:rgba(0,0,0,0.7);color:#fff;padding:8px;border-radius:6px;font-size:12px;display:none;z-index:9999"></div>
+    <!-- Firebase SDKs (compat) required for auth/firestore/storage -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    <script src="../scripts/firebase-init.js"></script>
+    <script src="../scripts/student-portal.js"></script>
+</body>
+</html>
